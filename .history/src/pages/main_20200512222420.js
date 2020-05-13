@@ -14,7 +14,7 @@ class main extends Component {
     }
     
   render(){
-    
+    console.log(data);
     return (
       <div className="App">
       <section class="cards">
