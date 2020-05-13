@@ -24,7 +24,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/testpage" component={NextPage} />
-          <Route path="/timedtest" component={TestPage} />
+          <Route path="/timedtest" component={NextPage} />
         </Switch>
       </BrowserRouter>
     )

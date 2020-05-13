@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {Switch, Route, BrowserRouter} from 'react-router-dom';
 
+//import './App.css';
+import './styleSheets/main.scss';
 import NextPage from './pages/testLoader';
 import Main from './pages/main';
-import TestPage from './pages/timedTest'
 
 //https://codepen.io/abbeyjfitzgerald/pen/QaeoYj
 
@@ -15,6 +16,12 @@ class App extends Component {
 
   
   
+  handleClick() {
+
+    //alert("hello");
+    return <NextPage/>
+  }
+
 
 
 
@@ -23,10 +30,9 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/testpage" component={NextPage} />
-          <Route path="/timedtest" component={TestPage} />
+          <Route path="/register" component={NextPage} />
         </Switch>
-      </BrowserRouter>
+    </BrowserRouter>
     )
   
   }
