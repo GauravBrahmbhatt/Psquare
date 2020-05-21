@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import random2D from "../RandomGenerator/RandomGenerator2D";
-import randomD from "../RandomGenerator/RandomGeneratorD";
+import random2D from "./RandomGenerator2D";
+import randomD from "./RandomGeneratorD";
 
 //https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230
 //https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/
@@ -23,7 +23,7 @@ class level3 extends Component {
     //console.log(this.state.questions);
     //console.log(this.state.answers);
     //console.log(this.state.count);
-    //console.log("Answers: " + this.state.answers[this.state.count]);
+    console.log("Answers: " + this.state.answers[this.state.count]);
     let i = 0;
     let sum = 0;
     const start = 99;

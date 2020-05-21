@@ -4,8 +4,8 @@ import {Switch, Route, BrowserRouter} from 'react-router-dom';
 import NextPage from './pages/testLoader';
 import Main from './pages/main';
 import TestPage from './pages/TestPapers/level1';
-//import Level3 from './pages/TestPapers/level3';
-import Level4 from './pages/TestPapers/level4';
+import Level3 from './pages/TestPapers/level3';
+import Level4 from './pages'
 
 //https://codepen.io/abbeyjfitzgerald/pen/QaeoYj
 

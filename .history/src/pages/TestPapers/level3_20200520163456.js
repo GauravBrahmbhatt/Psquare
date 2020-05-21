@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import random2D from "../RandomGenerator/RandomGenerator2D";
-import randomD from "../RandomGenerator/RandomGeneratorD";
+import random2D from "./RandomGenerator2D";
+import randomD from "./RandomGeneratorD";
 
 //https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230
 //https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import random3D from "../RandomGenerator/RandomGenerator3D";
 import random2D from "../RandomGenerator/RandomGenerator2D";
 import randomD from "../RandomGenerator/RandomGeneratorD";
 
@@ -26,9 +27,13 @@ class level3 extends Component {
     //console.log("Answers: " + this.state.answers[this.state.count]);
     let i = 0;
     let sum = 0;
-    const start = 99;
+    let multiply=1;
+    let m1=1;
+    let m2=1;
+    const start2D = 99;
+    const start3D = 999;
     let random = [];
-    while (i < 4 && this.state.questions.length <= 50) {
+    while (i < 6 && this.state.questions.length <= 10) {
       if (sum === 0) {
         random.push(random2D(start));
         sum = sum + random[i];
@@ -41,6 +46,13 @@ class level3 extends Component {
       }
 
       i++;
+    }
+
+    while((this.state.questions.length >= 10) && (this.state.questions.length <= 20)){
+        m1= random3D(mulStart);
+        m2= randomD()
+
+
     }
     this.setState({
       questions: [...this.state.questions, random],

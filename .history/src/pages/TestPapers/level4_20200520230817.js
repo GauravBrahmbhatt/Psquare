@@ -1,11 +1,19 @@
 import React, { Component } from "react";
+import random3D from "../RandomGenerator/RandomGenerator3D";
 import random2D from "../RandomGenerator/RandomGenerator2D";
 import randomD from "../RandomGenerator/RandomGeneratorD";
 
 //https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230
 //https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/
 
+    const startD = 9;
+    const start2D = 99;
+    const start3D = 999;
+
 class level3 extends Component {
+
+    
+
   constructor() {
     super();
     this.state = {
@@ -20,21 +28,26 @@ class level3 extends Component {
   abacus = () => {
     //alternate positive and negative num
 
-    //console.log(this.state.questions);
+    console.log(this.state.questions);
+    console.log(this.state.questions.length);
     //console.log(this.state.answers);
     //console.log(this.state.count);
     //console.log("Answers: " + this.state.answers[this.state.count]);
     let i = 0;
-    let sum = 0;
-    const start = 99;
+    let ans = 0;
+    let m1=1;
+    let m2=1;
+    //const startD = 9;
+    //const start2D = 99;
+    //const start3D = 999;
     let random = [];
-    while (i < 4 && this.state.questions.length <= 50) {
-      if (sum === 0) {
-        random.push(random2D(start));
-        sum = sum + random[i];
+    while (i < 6 && this.state.questions.length <= 10) {
+      if (ans === 0) {
+        random.push(random2D(start2D));
+        ans = ans + random[i];
       } else if (i % 2 === 0) {
         random.push(random2D(sum));
-        sum = sum + random[i];
+        ans = sum + random[i];
       } else {
         random.push(-random2D(sum));
         sum = sum + random[i];
@@ -42,6 +55,20 @@ class level3 extends Component {
 
       i++;
     }
+
+   if((this.state.questions.length >= 10) && (this.state.questions.length <= 25))
+    {
+        m1= random3D(start3D);
+        m2= randomD(startD);
+        sum = m1 * m2;
+        console.log(sum);
+        random.push(m1,m2);
+    }
+
+    if(this.state.questions.length <= 25){
+
+    }
+
     this.setState({
       questions: [...this.state.questions, random],
       answers: [...this.state.answers, sum],
@@ -58,11 +85,11 @@ class level3 extends Component {
     //console.log("Answers: " + this.state.answers[this.state.count]);
     let i = 0;
     let sum = 0;
-    const start = 9;
+    //const start = 9;
     let random = [];
     while (i < 6 && this.state.questions.length <= 50) {
       if (sum === 0) {
-        random.push(randomD(start));
+        random.push(randomD(startD));
         sum = sum + random[i];
       } else if (i % 2 === 0) {
         random.push(randomD(sum));

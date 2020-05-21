@@ -26,9 +26,12 @@ class level3 extends Component {
     //console.log("Answers: " + this.state.answers[this.state.count]);
     let i = 0;
     let sum = 0;
+    let multiply=1;
+    let m1=1;
+    let m2=1;
     const start = 99;
     let random = [];
-    while (i < 4 && this.state.questions.length <= 50) {
+    while (i < 6 && this.state.questions.length <= 10) {
       if (sum === 0) {
         random.push(random2D(start));
         sum = sum + random[i];
@@ -41,6 +44,12 @@ class level3 extends Component {
       }
 
       i++;
+    }
+
+    while((this.state.questions.length >= 10) && (this.state.questions.length <= 20)){
+        m1= this.
+
+
     }
     this.setState({
       questions: [...this.state.questions, random],
