@@ -11,7 +11,7 @@ const start2D = 99;
 const start3D = 999;
 //const size = 40;
 
-class level6 extends Component {
+class level4 extends Component {
   constructor() {
     super();
     this.state = {
@@ -143,7 +143,7 @@ class level6 extends Component {
   }
 }
 
-export default level6;
+export default level3;
 
 /*<div>{this.state.questions[this.state.count].map(res=>(
           <div>{res}</div>

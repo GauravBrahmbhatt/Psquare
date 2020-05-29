@@ -143,7 +143,7 @@ class level6 extends Component {
   }
 }
 
-export default level6;
+export default level4;
 
 /*<div>{this.state.questions[this.state.count].map(res=>(
           <div>{res}</div>
