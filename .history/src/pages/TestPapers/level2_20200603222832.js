@@ -6,7 +6,7 @@ import "../../styleSheets/main.scss";
 
 //https://daveceddia.com/usestate-hook-examples/
 
-class level2 extends Component {
+export default class Level3 extends Component {
   constructor() {
     super();
     this.state = {
@@ -151,10 +151,6 @@ class level2 extends Component {
   //   });
   // }
 }
-
-
-export default level2;
-
 
 /*
    <div>{data.map((res,index)=>( 

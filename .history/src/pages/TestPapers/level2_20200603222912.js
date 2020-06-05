@@ -152,10 +152,6 @@ class level2 extends Component {
   // }
 }
 
-
-export default level2;
-
-
 /*
    <div>{data.map((res,index)=>( 
               

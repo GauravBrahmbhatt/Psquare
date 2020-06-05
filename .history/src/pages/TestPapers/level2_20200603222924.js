@@ -153,7 +153,7 @@ class level2 extends Component {
 }
 
 
-export default level2;
+export default level2
 
 
 /*
