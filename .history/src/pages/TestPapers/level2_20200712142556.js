@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import data from "../../PracticeTest-master/JSON_PT.json";
 import Timer from "../timer";
-import "../../styleSheets/main.scss";
+import "../../styleSheets/test.scss";
 
 //https://daveceddia.com/usestate-hook-examples/
 
-class :evel2 extends Component {
+class level2 extends Component {
   constructor() {
     super();
     this.state = {
@@ -53,9 +53,7 @@ class :evel2 extends Component {
     //let show = false;
 
     return !this.state.result ? (
-     
       <div className="center">
-      
         {this.state.loadTimer ? (
           <React.Fragment>
             <Timer />
@@ -142,6 +140,7 @@ class :evel2 extends Component {
           <br />
           <div>Your Score is: {score}</div>
         </div>
+        <div></div>
       </div>
     );
   }
@@ -151,6 +150,8 @@ class :evel2 extends Component {
   //   });
   // }
 }
+
+export default level2;
 
 /*
    <div>{data.map((res,index)=>( 
