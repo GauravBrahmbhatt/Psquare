@@ -47,7 +47,7 @@ body {
 }
 
 .heading-secondary {
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
@@ -56,7 +56,6 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
-    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 
     @include respond(tab-port) {
         font-size: 3rem;
@@ -67,10 +66,10 @@ body {
     }
 
     //skewY(2deg) skewX(15deg)
-    /*&:hover {
+    &:hover {
         transform:  scale(1.1);
-        
-    }*/
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
 }
 
 .heading-tertiary {

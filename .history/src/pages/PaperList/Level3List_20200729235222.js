@@ -5,7 +5,6 @@ import {Link } from 'react-router-dom';
 function Level3List(props) {
     console.log(props.level);
     return (
-        <div>
         <Link to="/">back</Link>
         <div className="features">
         
@@ -68,7 +67,6 @@ function Level3List(props) {
             <Link to={`/timedtest?l=${props.level}&m=9`}>
                 <button className="hover">Paper 9</button>
             </Link>
-        </div>
         </div>
         </div>
     )

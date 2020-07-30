@@ -70,7 +70,6 @@ function Level3List(props) {
             </Link>
         </div>
         </div>
-        </div>
     )
 }
 

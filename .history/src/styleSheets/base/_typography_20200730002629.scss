@@ -56,7 +56,6 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
-    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 
     @include respond(tab-port) {
         font-size: 3rem;
@@ -69,7 +68,7 @@ body {
     //skewY(2deg) skewX(15deg)
     /*&:hover {
         transform:  scale(1.1);
-        
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }*/
 }
 

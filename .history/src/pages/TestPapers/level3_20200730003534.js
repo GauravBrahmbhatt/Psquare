@@ -215,7 +215,7 @@ class level3 extends Component {
         ) : (
           <React.Fragment>
 
-            <div className="header_main">
+            <div className>
               <p className="heading-secondary">Total Questions: 50</p>
               <br />
               <br />

@@ -172,7 +172,7 @@ class level3 extends Component {
   }
 
   //onTimeOut={() => this.onTimeOut()}
-  //className="center"
+  //
 
   render() {
       return !this.state.result ? (
@@ -215,7 +215,7 @@ class level3 extends Component {
         ) : (
           <React.Fragment>
 
-            <div className="header_main">
+            <div>
               <p className="heading-secondary">Total Questions: 50</p>
               <br />
               <br />

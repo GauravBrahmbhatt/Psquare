@@ -38,6 +38,5 @@ export default function Level1List() {
       </Link>
       </div>
     </div>
-    </div>
   );
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Level1List() {
   return (
-    <div>
+    <div></div>
     <Link to="/">back</Link>
     <div className="features">
       
@@ -37,7 +37,6 @@ export default function Level1List() {
         <button className="hover">Paper 9</button>
       </Link>
       </div>
-    </div>
     </div>
   );
 }

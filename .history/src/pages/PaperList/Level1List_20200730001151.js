@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Level1List() {
   return (
-    <div>
-    <Link to="/">back</Link>
-    <div className="features">
-      
-      <div className="feature">
+    <div className="feature">
+      <Link to="/">back</Link>
+      <div
       <p className="title1">Test Papers</p>
       <Link to="/timedtest?p=1">
         <button className="hover">Paper 1</button>
@@ -36,8 +34,6 @@ export default function Level1List() {
       <Link to="/timedtest?p=9">
         <button className="hover">Paper 9</button>
       </Link>
-      </div>
-    </div>
     </div>
   );
 }
