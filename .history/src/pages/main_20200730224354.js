@@ -90,7 +90,6 @@ class main extends Component {
                   </article>
             </Link>
         </section>
-        </div>
       </div>
     );
   }

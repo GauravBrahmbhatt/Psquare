@@ -74,13 +74,14 @@ body {
 }
 
 .heading-tertiary {
-
-        text-transform: uppercase;
-        font-size: 4rem;
+    //font-size: $default-font-size;
+    //font-weight: 700;
+    //text-transform: uppercase;
+        font-size: 3rem;
         text-transform: uppercase;
         font-weight: 700;
         display: inline-block;
-        background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(to right, $color-secondary-light, $color-secondsar-dark);
         -webkit-background-clip: text;
         color: transparent;
         letter-spacing: .2rem;
@@ -92,9 +93,14 @@ body {
         }
     
         @include respond(phone) {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
     
+        //skewY(2deg) skewX(15deg)
+        /*&:hover {
+            transform:  scale(1.1);
+            
+        }*/
 }
 
 .paragraph {

@@ -17,10 +17,8 @@ class main extends Component {
     //let count =0;
     return (
       <div >
-        <div className="header_tertiary">
+        
         <div className="heading-tertiary">PRACTICE TESTS</div>
-        </div>
-        <div className="home">
         <section className="row">
           <Link to="/testpage?l=1">
                   <article class="card">
@@ -90,7 +88,6 @@ class main extends Component {
                   </article>
             </Link>
         </section>
-        </div>
       </div>
     );
   }
