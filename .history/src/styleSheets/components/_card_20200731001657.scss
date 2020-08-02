@@ -1,5 +1,7 @@
 .card {
     background-color: rgba($color-white, .8);
+    background-image: linear-gradient(rgba($color-secondary-dark, .93), rgba($color-secondary-light, .93)), url(../images/hero-small.jpg);
+    backgroud-size:cover
     font-size: 1.5rem;
     padding: 2rem;
     text-align: center;

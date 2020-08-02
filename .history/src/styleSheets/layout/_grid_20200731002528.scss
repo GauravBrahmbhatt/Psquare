@@ -1,15 +1,11 @@
 .row {
-    //grid-column: full-start / col-end 6;
     background-color: $color-grey-light-1;
-    background-image: linear-gradient(rgba($color-secondary-dark, .7), rgba($color-secondary-light, .7)), url(../images/Bench.jpg);
+    background-image: linear-gradient(rgba($color-secondary-dark, .7), rgba($color-secondary-light, .7)), url(../images/hero-small.jpg);
     background-size:cover;
     //position: relative;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    //grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-    //grid-template-columns: minmax(min-content, max-content);
-    grid-row-gap: 1.5rem;
     grid-row-gap: 3.5rem;
     grid-column-gap: 3.5rem;
     

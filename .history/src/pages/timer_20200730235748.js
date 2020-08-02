@@ -84,7 +84,7 @@ export default class Timer extends Component {
   render() {
     return (
       <div>
-        <h1 className="timer-card" style={{ fontSize: 100, marginLeft: 100 }}>
+        <h1 className="tcard" style={{ fontSize: 100, marginLeft: 100 }}>
           {this.state.value}:{this.state.seconds}
         </h1>
       </div>

@@ -220,7 +220,7 @@ class level3 extends Component {
               <br />
               <br />
               <button
-                className="btn btn--green"
+                className="button--green"
                 onClick={() => this.setState({ loadTimer: true })}
               >
                 Start
