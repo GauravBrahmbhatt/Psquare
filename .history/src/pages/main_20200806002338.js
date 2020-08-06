@@ -78,7 +78,7 @@ class main extends Component {
                     
                   </article>
             </Link>
-           
+            
             <Link to="/testpage?l=7" level="7">
                   <article class="card">
                     <picture class="thumbnail">
@@ -107,7 +107,6 @@ class main extends Component {
 
 export default main;
 
-// </div>
-//<div className="contentmain"></div>
+//
 
 

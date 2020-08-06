@@ -87,7 +87,8 @@ class main extends Component {
                       <p class="card__text">Term 7</p>
                   </article>
             </Link> 
-            
+            </div>
+            <div className="contentmain">
             <Link to="/testpage?l=8" level="8">
                   <article class="card">
                     <picture class="thumbnail">
