@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Level1List() {
   return (
     <div>
-    <Link to="/">back</Link>
+    <div className = "back"><Link to="/"> <i className="fa fa-arrow-circle-left fa-4x" aria-hidden="true"></i></Link></div>
     <div className="features">
       
       <div className="feature">

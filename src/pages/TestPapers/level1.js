@@ -103,7 +103,7 @@ class level1 extends Component {
         )}
       </div>
     ) : (
-      <div className="center">
+      <div className="heading-white">
         Result:
         <div>
           Correct Answers:

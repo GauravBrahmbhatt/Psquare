@@ -3,11 +3,34 @@ import Timer from "../timer";
 import random3D from "../RandomGenerator/RandomGenerator3D";
 import random2D from "../RandomGenerator/RandomGenerator2D";
 import randomD from "../RandomGenerator/RandomGeneratorD";
+							 
+									 
 
 const startD = 9;
 const start2D = 99;
 const start3D = 999;
 
+								
+				 
+			
+				  
+			   
+					   
+		   
+					 
+				   
+					 
+				 
+		 
+			  
+					
+					   
+					
+			
+	  
+								   
+												   
+   
 
 class level4 extends Component {
 
@@ -32,17 +55,54 @@ class level4 extends Component {
       };
       this.input = React.createRef();
       this.handleSubmit= this.handleSubmit.bind(this)
+												  
+						
     }
+   
+
+
 
     componentDidMount() {
       if (String(this.props.type) === String("abacus")) {
+							   
+							   
+						  
+					   
+								  
+								 
+							   
+							 
+													  
+														   
+							   
+														
+							
+											   
+	 
+		 
+							
+	 
+									  
         this.setState({ abacus: true, time: '03' });
+			   
         this.abacus();
+		 
       } else {
         this.setState({abacus: false, time: '03' });
         this.mentalmath();
+									
+					 
+		 
+	 
+								  
+					
+							
+					
       }
+						
     }
+	
+
 
     handleSubmit = (event) => {
       event.preventDefault();
@@ -126,6 +186,7 @@ class level4 extends Component {
     }
 
     const {questionNumber,qa} = this.state;
+								
     if(questionNumber===0){
       qa[questionNumber].questions=random;
       qa[questionNumber].answers=ans;
@@ -145,6 +206,7 @@ class level4 extends Component {
     console.log("Length of QA")
     console.log(this.state.qa.length);
   };
+
 
   mentalmath = () => {
   
@@ -202,6 +264,7 @@ class level4 extends Component {
     }
 
     const {questionNumber,qa} = this.state;
+					  
     //console.log(questionNumber);
     if(questionNumber===0){
       qa[questionNumber].questions=random;
@@ -219,6 +282,7 @@ class level4 extends Component {
       qa.push(bundle)
     }
     this.setState({qa:qa, questionNumber: this.state.questionNumber+1});
+	
 
   };
 
@@ -226,88 +290,112 @@ class level4 extends Component {
     this.setState({result:true});
    }
 
+									  
+					  
+
   render() {
     return !this.state.result ? (
-      <div className="center">
+      <div >
         {this.state.loadTimer ? (
           <React.Fragment>
+			<div className="u-center-item">								 
             <Timer onTimeOut={() => this.onTimeOut()} value={this.state.time}/>
+            </div>
             <div>
-            <h1>
-              <table className="qtable">
+              <div className="question_grid">
+				
                 {this.state.qa[this.state.count].questions.map((res2) => (
-                  <tr>
-                    <td>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{res2}{" "}
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </td>
-                  </tr>
-                ))}
-              </table>
-              </h1>
+				
+                  <div className="question-card u-margin-bottom-small">
+                        {res2}{" "}
+													
+                    </div>
+                    
+                  ))}
+      
+                  </div>
+					  
               <br />
             <br />
+											   
 
-            <form>
-              <label>Your Answer</label>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+					  
+            <form className="form-grid form">
               <input
-                type="number"
-                name="number"
-                ref={(input) => (this.input = input)}
-              />{" "}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button onClick={this.handleSubmit}>Submit your answer</button>
-            </form>
-    </div>
-    </React.Fragment>
+                  className="form__input"
+                  type="number"
+                  name="number"
+                  placeholder="Please enter your answer"
+                  ref={(input) => (this.input = input)}
+                  required
+                />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button className="btn-submit" onClick={this.handleSubmit}>submit</button>
+              </form>
+      </div>
+      </React.Fragment>
+        ) : (
+          <React.Fragment>
+
+            <div className="header_main">
+              <p className="heading-secondary">Total Questions: 50</p>
+              <br />
+              <br />
+              <button
+                className="btn btn--green"
+                onClick={() => this.setState({ loadTimer: true })}
+              >
+                Start
+              </button>
+		</div>
+          </React.Fragment>
+          
+        )}
+      </div>
+		  
+			
       ) : (
-        <React.Fragment>
+        <div className="result">
+           <div className="header_white result__headermain">
+ <div className="heading-black">
+        Result:
+        </div>
+        </div>
+        <div className="result__content">
 
-          <div>
-            <p className="title2">Total Questions: 40</p>
-            <br />
-            <br />
-            <button
-              className="start"
-              onClick={() => this.setState({ loadTimer: true })}
-            >
-              Start
-            </button>
+            {this.state.qa.map((res) => (
+              <div className="result-card">
+              <div>{res.questions.map(q=>(
+                <React.Fragment>{q}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</React.Fragment>))}</div>
+              <div>&nbsp;&nbsp;&nbsp;Answer:&nbsp;{res.answers}&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;Submitted:&nbsp;{res.submitted}&nbsp;&nbsp;&nbsp;</div>
+              <div>
+                {res.result ? (
+                  <i className="fa fa-check fa-3" aria-hidden="true"></i>
+                ) : (
+                  <i className="fa fa-times fa-3" aria-hidden="true"></i>
+                )}
+              </div>
+              </div>
+            ))}
           </div>
-        </React.Fragment>
-      )}
-    </div>
-  ) : (
-    <div className="center">
-      Result:
-      <table className="qtable">
+       
+        <br />
+        <br />
+        <br />
+        <div className="header_white result__headermain">
+        <div className="heading-black">Your Score is: {this.state.score}</div>
+        </div>
+        </div>
+    );
+		  
+	   
+							
+			 
+								
 
-          {this.state.qa.map((res) => (
-            <tr>
-            <td>&nbsp;&nbsp;&nbsp;{res.answers}&nbsp;&nbsp;&nbsp;</td>
-            <td>&nbsp;&nbsp;&nbsp;{res.submitted}&nbsp;&nbsp;&nbsp;</td>
-            <td>
-              {res.result ? (
-                <i className="fa fa-check fa-3" aria-hidden="true"></i>
-              ) : (
-                <i className="fa fa-times fa-3" aria-hidden="true"></i>
-              )}
-            </td>
-            </tr>
-          ))}
-
-      </table>
-      <br />
-      <br />
-      <br />
-      <table className="qtable">Your Score is: {this.state.score}</table>
-    </div>
-
-  );
-
-}
+  }
 }
 
 export default level4;
+

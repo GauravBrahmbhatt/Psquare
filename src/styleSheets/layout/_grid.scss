@@ -3,14 +3,14 @@
    
     margin: 0 auto;
  
-  background-image: linear-gradient(
-      rgba($color-secondary-dark, 0.7),
-      rgba($color-secondary-light, 0.7)
-    ),
-    url(../images/Bench.jpg);
-  background-size: cover;
-  background-position: center;
-  justify-items: center;
+  // background-image: linear-gradient(
+  //     rgba($color-secondary-dark, 0.7),
+  //     rgba($color-secondary-light, 0.7)
+  //   ),
+  //   url(../images/Bench.jpg);
+  // background-size: cover;
+  // background-position: center;
+  // justify-items: center;
   //position: relative;
 
   //display: grid;
@@ -19,7 +19,7 @@
  // grid-template-columns: auto;//repeat(4, 1fr);
  
   //grid-gap: 7rem;
-  align-items: center;
+  //align-items: center;
   //grid-template-columns: repeat(4, 1fr);
   //grid-template-rows: auto;
   /*grid-template-areas:
@@ -89,8 +89,17 @@
 
 }
 
-.result_grid{
+.result{
 
+  margin: 0 auto;
+
+  &__headermain{
+    justify-self: center;
+}
+
+
+
+  &__content{
     display:grid;
     //grid-template-columns: repeat(5, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -102,6 +111,7 @@
     grid-row-gap: 1.5rem;
     grid-row-gap: 3.5rem;
     grid-column-gap: 3.5rem;
+  }
 
     /*@include respond(tab-port) {
         grid-template-columns: repeat(2, 1fr);

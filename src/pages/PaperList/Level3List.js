@@ -1,12 +1,13 @@
 import React from 'react'
 import {Link } from 'react-router-dom';
+//import bkimg from "./Back.png";
 //timedtest?L={level}&a=val&m=val
 
 function Level3List(props) {
     console.log(props.level);
     return (
         <div>
-        <Link to="/">back</Link>
+        <div className = "back"><Link to="/"> <i className="fa fa-arrow-circle-left fa-4x" aria-hidden="true"></i></Link></div>
         <div className="features">
         
         <div className="feature">

@@ -1,9 +1,9 @@
 .card {
     background-color: rgba($color-white, .8);
     font-size: 1.5rem;
-    padding: 2rem;
+    padding: 3.5rem;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 20px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: transform .3s;
 
@@ -11,16 +11,36 @@
         padding: 2rem;
     }
 
-    &__icon {
-        font-size: 6rem;
-        margin-bottom: .5rem;
-        display: inline-block;
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
+    @include respond(big-desktop) {
+        font-size: 3rem;
+        padding: 6.5rem;
+    }
+
+    // .thumbnail img {
+    //     fill: #c7c4c4;
+    //     height: 135px;
+    //     //opacity: 0.25;
+    //     padding: 1.5rem;
+    //   }
+
+    &__thumbnail{
+        //font-size: 6rem;
+        //margin-bottom: .5rem;
+        //display: inline-block;
+        //padding: 1.5rem;
+        fill: #c7c4c4;
+        height: 135px;
+        //background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        //-webkit-background-clip: text;
+        //color: transparent;
 
         @include respond(tab-port) {
             margin-bottom: 0;
+            height: 100px;
+        }
+
+        @include respond(big-desktop) {
+            height:150px
         }
     }
 
@@ -28,6 +48,18 @@
         transform: translateY(-1.5rem) scale(1.03);
     }
 }
+
+     .thumbnail img {
+         fill: #c7c4c4;
+         height: 135px;
+         //opacity: 0.25;
+         padding: 1.5rem;
+
+         @include respond(big-desktop) {
+            height:180px
+        }
+       }
+
 
 .timer-card{
 
@@ -83,6 +115,7 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, .35);
     transition: transform .3s;
+    overflow-wrap: break-word;
 
     &:hover {
         transform: scale(1.25);
