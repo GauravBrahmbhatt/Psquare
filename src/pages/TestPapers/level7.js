@@ -252,7 +252,8 @@ class level7 extends Component {
             </div>
              <div>
               <div className="question_grid">
-				
+              {this.state.qa[this.state.count].type==="mul" ? <div>Multiplication</div>: this.state.qa[this.state.count].type === "div" ? <div> Division</div> : ""}
+
                 {this.state.qa[this.state.count].questions.map((res2) => (
                   <div className="question-card u-margin-bottom-small">
                         {res2}{" "}

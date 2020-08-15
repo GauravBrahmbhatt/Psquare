@@ -230,11 +230,13 @@ class level3 extends Component {
         )}
       </div>
     ) : (
-      <React.Fragment>
-      <div className="center">
+      <div className="result">
+           <div className="header_white result__headermain">
+ <div className="heading-black">
         Result:
         </div>
-        <div className="result_grid">
+        </div>
+        <div className="result__content">
 
             {this.state.qa.map((res) => (
               <div className="result-card">
@@ -256,8 +258,10 @@ class level3 extends Component {
         <br />
         <br />
         <br />
-        <table className="qtable">Your Score is: {this.state.score}</table>
-        </React.Fragment>
+        <div className="header_white result__headermain">
+        <div className="heading-black">Your Score is: {this.state.score}</div>
+        </div>
+        </div>
     );
 
   }
