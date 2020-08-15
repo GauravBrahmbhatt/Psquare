@@ -299,34 +299,38 @@ class level5 extends Component {
       )}
     </div>
   ) : (
-    <React.Fragment>
-      <div className="center">
-        Result:
-        </div>
-        <div className="result_grid">
+    <div className="result">
+    <div className="header_white result__headermain">
+<div className="heading-black">
+ Result:
+ </div>
+ </div>
+ <div className="result__content">
 
-            {this.state.qa.map((res) => (
-              <div className="result-card">
-              <div>{res.questions.map(q=>(
-                <React.Fragment>{q}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</React.Fragment>))}</div>
-              <div>&nbsp;&nbsp;&nbsp;Answer:&nbsp;{res.answers}&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;Submitted:&nbsp;{res.submitted}&nbsp;&nbsp;&nbsp;</div>
-              <div>
-                {res.result ? (
-                  <i className="fa fa-check fa-3" aria-hidden="true"></i>
-                ) : (
-                  <i className="fa fa-times fa-3" aria-hidden="true"></i>
-                )}
-              </div>
-              </div>
-            ))}
-          </div>
-      <br />
-      <br />
-      <br />
-      <table className="qtable">Your Score is: {this.state.score}</table>
-   </React.Fragment>
+     {this.state.qa.map((res) => (
+       <div className="result-card">
+       <div>{res.questions.map(q=>(
+         <React.Fragment>{q}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</React.Fragment>))}</div>
+       <div>&nbsp;&nbsp;&nbsp;Answer:&nbsp;{res.answers}&nbsp;&nbsp;&nbsp;</div>
+       <div>&nbsp;&nbsp;&nbsp;Submitted:&nbsp;{res.submitted}&nbsp;&nbsp;&nbsp;</div>
+       <div>
+         {res.result ? (
+           <i className="fa fa-check fa-3" aria-hidden="true"></i>
+         ) : (
+           <i className="fa fa-times fa-3" aria-hidden="true"></i>
+         )}
+       </div>
+       </div>
+     ))}
+   </div>
 
+ <br />
+ <br />
+ <br />
+ <div className="header_white result__headermain">
+ <div className="heading-black">Your Score is: {this.state.score}</div>
+ </div>
+ </div>
   );
 
 }
