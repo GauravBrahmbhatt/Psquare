@@ -120,6 +120,7 @@ class level7 extends Component {
     }
 
     if (this.state.qa.length > 10 && this.state.qa.length < 25) {
+      type = 'mul';
       num1 = random3D(start3D);
       num2 = randomD(startD);
       ans = num1 * num2;
@@ -130,7 +131,7 @@ class level7 extends Component {
       this.state.qa.length >= 25 &&
       this.state.qa.length <= 40
     ) {
-      console.log("Div");
+      type = 'div';
       num1 = random3D(start3D);
       num2 = randomD(startD);
       ans = Math.floor(num1 / num2);
